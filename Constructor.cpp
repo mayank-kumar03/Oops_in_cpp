@@ -29,11 +29,21 @@ public:
 
 
       */
-      Student(string n, int a, float g) {
+      // Default constructor
+      Student() { //default constructor
+          
+      }
+      Student(string n, int a, float g) {//parameterized constructor
             name = n;
             age = a;
             gpa = g;
       }
+
+      // Student(const Student &other) { //copy constructor
+      //       name = other.name;
+      //       age = other.age;
+      //       gpa = other.gpa;
+      // }
       
       // Method to display student information
       void display() {
@@ -47,4 +57,21 @@ int main() {
       Student student2("Bob", 22, 3.5);
       student1.display();
       student2.display();
+      // Creating an object of Student using the default constructor
+      Student student3; //default constructor
+      student3.name = "Charlie";
+      student3.age = 21;
+      student3.gpa = 3.9;
+      student3.display();
+      Student student4;
+      //use copy constructor
+      student4 = student1; //copy constructor
+      student4.name = "David";//deep copy
+      cout << "Copying student1 to student4 using copy constructor:" << endl;
+      student4.display();
+      // Creating an object of Student using the copy constructor
+      Student student5(student2); //copy constructor
+      cout << "Copying student2 to student5 using copy constructor:" << endl;
+      student5.display();
+      
 }
