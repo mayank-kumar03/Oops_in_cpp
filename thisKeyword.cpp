@@ -10,6 +10,10 @@ public:
           this->name = name;
           this->age = age;
      }
+
+     void print() {
+          cout << "Name: " << name << ", Age: " << age << endl;
+     }
 };
 /*
 The 'this' keyword is a pointer that points to the current object of the class.
@@ -25,15 +29,25 @@ int main() {
       // Creating an object of Cricketer using the constructor
       Cricketer player1("Sachin Tendulkar", 50);
 
-     // Using 'this' keyword to access member variables
-     cout << "Player Name: " << player1.name << endl;
-     cout << "Player Age: " << player1.age << endl;
+     
 
       // Creating another object of Cricketer using the constructor
       Cricketer player2("Virat Kohli", 35);
 
-     cout << "Player Name: " << player2.name << endl;
-     cout << "Player Age: " << player2.age << endl;
+      // Printing the details of the cricketers
+      // player1.print();
+      // player2.print();
 
+
+
+      /*
+      int a=4;
+      int *ptr = &a; // Pointer to an integer
+      cout << "Value of a: " << a << endl;
+      cout << "Address of a: " << &a << endl;
+      cout << "Value of ptr: " << ptr << endl;
+      *ptr = 10; // Changing the value at the address pointed by ptr
+      cout << "New value of a: " << a << endl;
+      */
      return 0;
 }
