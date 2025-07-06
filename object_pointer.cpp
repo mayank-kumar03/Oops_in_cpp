@@ -41,5 +41,8 @@ public:
             cout << "Name of student1 using pointer: " << ptr->name << endl;
             cout << "Age of student1 using pointer: " << ptr->age << endl;
 
+            Student *student3= new Student("Charlie", 21, 3.9); // Dynamically allocated object 
+            student3->display(); // Accessing members using pointer
+
 
       }
