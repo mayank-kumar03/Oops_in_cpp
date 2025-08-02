@@ -39,11 +39,11 @@ public:
             gpa = g;
       }
 
-      // Student(const Student &other) { //copy constructor
-      //       name = other.name;
-      //       age = other.age;
-      //       gpa = other.gpa;
-      // }
+      Student(const Student &other) { //copy constructor
+            name = other.name;
+            age = other.age;
+            gpa = other.gpa;
+      }
       
       // Method to display student information
       void display() {
@@ -53,21 +53,21 @@ public:
 
 int main() {
       // Creating an object of Student using the constructor
-      Student student1("Alice", 20, 3.8);
+      //Student student1("Alice", 20, 3.8);
       Student student2("Bob", 22, 3.5);
-      student1.display();
+     // student1.display();
       student2.display();
       // Creating an object of Student using the default constructor
-      Student student3; //default constructor
-      student3.name = "Charlie";
-      student3.age = 21;
-      student3.gpa = 3.9;
-      student3.display();
+      // Student student3; //default constructor
+      // student3.name = "Charlie";
+      // student3.age = 21;
+      // student3.gpa = 3.9;
+      // student3.display();
       Student student4;
       //use copy constructor
-      student4 = student1; //copy constructor
+      student4 = student2; //copy constructor
       student4.name = "David";//deep copy
-      cout << "Copying student1 to student4 using copy constructor:" << endl;
+      cout << "Copying student2 to student4 using copy constructor:" << endl;
       student4.display();
       // Creating an object of Student using the copy constructor
       Student student5(student2); //copy constructor
